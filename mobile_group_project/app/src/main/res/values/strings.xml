@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Fake pinterest</string>
+    <string name="email_adr">Email address</string>
+    <string name="policy1">By continuing, you agree to Pinterest\'s Terms of Service and acknowledge that you\'ve read our Privacy Policy.</string>
+    <string name="policy2">Notice at collection.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="Heading_search">Popular on Pinterest</string>
+    <string name="test"> Testing layout</string>
+    <string name="search">Search Pinterest</string>
+    <string name="flower">Flower</string>
+    <string name="gardening">Gardening ideas</string>
+    <string name="anime">Anime</string>
+    <string name="fitness">Fitness</string>
+    <string name="animals">Animals</string>
+    <string name="beauty">Beauty</string>
+    <string name="horror">Horror</string>
+    <string name="travel">Travel</string>
+
+    <string name="creating">Start creating now</string>
+    <string name="the_chosen_one">The chosen one</string>
+    <string name="testing">Testing</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="options">Options</string>
+    <string name="upload_a_video">Upload a video</string>
+    <string name="create_a_short">Create a short</string>
+    <string name="hide">Hide</string>
+    <string name="report">Report</string>
+    <string name="facebook">Facebook</string>
+    <string name="gmail">Gmail</string>
+    <string name="close">Close</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="connect_to_start_chatting">Connect to start chatting</string>
+    <string name="invite_your_friends">Invite your friends</string>
+    <string name="bonlinh">Bonlinh</string>
+    <string name="_2_19_pm">2:19 PM</string>
+    <string name="contacts">Contacts</string>
+    <string name="vi_t_an">Việt An</string>
+    <string name="messages">Messages</string>
+    <string name="new_message">New message</string>
+    <string name="search_your_pins">Search your pins</string>
+    <string name="doors">Doors</string>
+    <string name="idk">IDK</string>
+</resources>

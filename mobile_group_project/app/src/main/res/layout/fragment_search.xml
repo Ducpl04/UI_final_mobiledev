@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/black"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/search_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/search_icon_mino">
+        </ImageView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="10dp"
+            android:hint="@string/search"
+            android:textColorHint="@color/white"
+            android:gravity="fill"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search_icon_mino"
+            android:layout_gravity="fill_horizontal">
+
+        </ImageView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Heading_search"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_1"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:alpha="0.3"
+                android:src="@drawable/search1"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/gardening"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:paddingStart="5dp"
+            android:layout_weight="1"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_2"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:src="@drawable/search2"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/beauty"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_3"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:alpha="0.3"
+                android:src="@drawable/search3"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/fitness"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:paddingStart="5dp"
+            android:layout_weight="1"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_4"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:src="@drawable/search4"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/animals"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_5"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:alpha="0.3"
+                android:src="@drawable/search5"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/travel"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:paddingStart="5dp"
+            android:layout_weight="1"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_6"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:src="@drawable/search6"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/horror"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:paddingEnd="5dp"
+            tools:ignore="RtlSymmetry">
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_7"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:alpha="0.3"
+                android:src="@drawable/search7"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/anime"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:paddingStart="5dp"
+            android:layout_weight="1"
+            tools:ignore="RtlSymmetry">
+
+            <Button
+                android:layout_width="match_parent"
+                android:id="@+id/search_button_8"
+                android:alpha="0.0"
+                android:layout_height="match_parent">
+            </Button>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.3"
+                android:src="@drawable/flower"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/round_image"
+                >
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_centerInParent="true"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:text="@string/flower"
+                android:gravity="center"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

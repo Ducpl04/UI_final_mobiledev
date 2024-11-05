@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_width="340dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_background"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/search_icon_mino">
+                </ImageView>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:padding="10dp"
+                    android:hint="@string/search_your_pins"
+                    android:textColorHint="@color/light_gray"
+                    android:gravity="fill"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="10dp"
+                android:src="@drawable/search_icon_mino"
+                android:id="@+id/pins_create">
+            </ImageButton>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_marginTop="50dp"
+            android:layout_height="match_parent">
+
+            <!-- Parent LinearLayout to divide screen horizontally -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- First half - LinearLayout with vertical orientation -->
+                <LinearLayout
+                    android:id="@+id/saved_left_linear_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/animal_4"
+                            app:shapeAppearanceOverlay="@style/round_image" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:alpha="0.0"
+                            android:id="@+id/animal_album"
+                            android:layout_height="match_parent">
+
+                        </Button>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="@string/animals"
+                        android:layout_marginBottom="2dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="23 Pins"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/anime_6"
+                            app:shapeAppearanceOverlay="@style/round_image" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:alpha="0.0"
+                            android:id="@+id/anime_album"
+                            android:layout_height="match_parent">
+
+                        </Button>
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="Animes"
+                        android:layout_marginBottom="2dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10 Pins"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <!-- Second half - LinearLayout with vertical orientation -->
+                <LinearLayout
+                    android:id="@+id/saved_middle_linear_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/door"
+                        app:shapeAppearanceOverlay="@style/round_image" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="@string/doors"
+                        android:layout_marginBottom="2dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1 Pins"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp">
+
+                    </TextView>
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/wallpaper_3"
+                        app:shapeAppearanceOverlay="@style/round_image" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:text="@string/idk"
+                        android:layout_marginBottom="2dp">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2 Pins"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="20dp"
+                        android:textSize="15sp">
+
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
