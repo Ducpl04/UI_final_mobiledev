@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/boards_frag"
+    android:paddingTop="20dp"
     android:background="@color/black">
 
     <LinearLayout
@@ -85,33 +87,33 @@
                             android:src="@drawable/animal_4"
                             app:shapeAppearanceOverlay="@style/round_image" />
 
-                        <Button
-                            android:layout_width="match_parent"
-                            android:alpha="0.0"
-                            android:id="@+id/animal_album"
-                            android:layout_height="match_parent">
+                            <Button
+                                android:layout_width="match_parent"
+                                android:alpha="0.0"
+                                android:id="@+id/animal_album"
+                                android:layout_height="match_parent">
 
-                        </Button>
+                            </Button>
                     </FrameLayout>
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:text="@string/animals"
-                        android:layout_marginBottom="2dp">
-                    </TextView>
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:text="@string/animals"
+                            android:layout_marginBottom="2dp">
+                        </TextView>
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="23 Pins"
-                        android:textColor="@color/white"
-                        android:layout_marginBottom="20dp"
-                        android:textSize="15sp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="23 Pins"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="20dp"
+                            android:textSize="15sp">
 
-                    </TextView>
+                        </TextView>
 
 
                     <FrameLayout

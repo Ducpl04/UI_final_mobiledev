@@ -1,6 +1,5 @@
 package vn.edu.usth.fakepinterest.SearchPage;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -13,12 +12,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import vn.edu.usth.fakepinterest.Homepage.clicked_on_image;
-import vn.edu.usth.fakepinterest.MainActivity;
+import vn.edu.usth.fakepinterest.Account;
 import vn.edu.usth.fakepinterest.R;
+import vn.edu.usth.fakepinterest.Saved.TheSecondChosenOne;
+import vn.edu.usth.fakepinterest.Saved.YourAccount;
 
 public class SearchEnd extends Fragment {
-
+    Button meow1;
+    Button meow2;
+    Button meow3;
     Button button1;
     Button button2;
     Button button4;
@@ -29,21 +31,21 @@ public class SearchEnd extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_search_end, container, false);
 
-
         back = v.findViewById(R.id.button_back);
         back.setOnClickListener(new View.OnClickListener(){
-        @Override
+            @Override
             public void onClick(View view) {
-            // Handle the back button click to remove the fragment
-            FragmentManager fragmentManager = getParentFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                // Handle the back button click to remove the fragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-            // Remove the current fragment
-            fragmentTransaction.remove(SearchEnd.this);
-            fragmentTransaction.commit();
+                // Remove the current fragment
+                fragmentTransaction.remove(SearchEnd.this);
+                fragmentTransaction.commit();
 
-            // Optional: Add a pop back stack call if you are using back stack
-            fragmentManager.popBackStack();            }
+                // Optional: Add a pop back stack call if you are using back stack
+                fragmentManager.popBackStack();
+            }
         });
 
         button1 = v.findViewById(R.id.search_end_1);
@@ -51,8 +53,10 @@ public class SearchEnd extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment clicked = new SearchPageClick();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main, clicked).commit();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
             }
         });
 
@@ -60,9 +64,11 @@ public class SearchEnd extends Fragment {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment clicked = new SearchPageAnimal4();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main, clicked).commit();
+                Fragment clicked = new SearchPageClick();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
             }
         });
 
@@ -72,8 +78,10 @@ public class SearchEnd extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment clicked = new SearchPageClick();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main, clicked).commit();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
             }
         });
 
@@ -82,11 +90,50 @@ public class SearchEnd extends Fragment {
             @Override
             public void onClick(View view) {
                 Fragment clicked = new SearchPageClick();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main, clicked).commit();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
             }
         });
 
+
+        meow1 = v.findViewById(R.id.search_end_meow_1);
+        meow1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment clicked = new TheSecondChosenOne();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
+            }
+        });
+
+        meow2 = v.findViewById(R.id.search_end_meow_2);
+        meow2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment clicked = new TheSecondChosenOne();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
+            }
+        });
+
+
+        meow3 = v.findViewById(R.id.search_end_meow_3);
+        meow3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment clicked = new TheSecondChosenOne();
+                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
+                transaction.replace(R.id.search_end_act, clicked);
+                transaction.addToBackStack(null); // Adds to back stack to allow navigation back
+                transaction.commit();
+            }
+        });
         return v;
 
     }

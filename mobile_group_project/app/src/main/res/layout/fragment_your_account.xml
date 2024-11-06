@@ -6,11 +6,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/your_account"
     android:background="#000000">
+
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -30,6 +36,7 @@
                 android:text="Cheems"
                 android:textColor="#FFFFFF" />
         </LinearLayout>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -87,10 +94,10 @@
             android:id="@+id/settingsLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <!--Setting -->
             <TextView
@@ -98,106 +105,106 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dp"
                 android:text="Setting"
-                android:textSize="18dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <!-- Account Management -->
             <TextView
                 android:id="@+id/accountManagement"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Account management"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Profile Visibility -->
             <TextView
                 android:id="@+id/profileVisibility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Profile visibility"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Home Feed Tuner -->
             <TextView
                 android:id="@+id/homeFeedTuner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Home feed tuner"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Social Permissions -->
             <TextView
                 android:id="@+id/socialPermissions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Social permissions"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Notifications -->
             <TextView
                 android:id="@+id/notifications"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Notifications"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Privacy and Data -->
             <TextView
                 android:id="@+id/privacyAndData"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="12dp"
+                android:gravity="start|center_vertical"
                 android:padding="16dp"
                 android:text="Privacy and data"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="12dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Reports and Violations Center -->
             <TextView
                 android:id="@+id/reportsAndViolations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="12dp"
+                android:gravity="start|center_vertical"
                 android:padding="16dp"
                 android:text="Reports and violations center"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="12dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Divider -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#333333"
-                android:layout_marginTop="16dp"/>
+                android:layout_marginTop="16dp"
+                android:background="#333333" />
 
             <!-- Log in -->
             <TextView
@@ -207,53 +214,53 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="1dp"
                 android:text="Log in"
-                android:textSize="18dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/white"
+                android:textSize="18dp" />
 
             <!-- Add Account -->
             <TextView
                 android:id="@+id/addAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Add account"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <!-- Security -->
             <TextView
                 android:id="@+id/security"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Security"
-                android:textStyle="bold"
                 android:textColor="#FFFFFF"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#333333"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:background="#333333" />
 
             <!-- Log out -->
             <TextView
                 android:id="@+id/logout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:drawablePadding="16dp"
+                android:gravity="start|center_vertical"
                 android:padding="12dp"
                 android:text="Log out"
-                android:textStyle="bold"
                 android:textColor="#FF4444"
-                android:gravity="start|center_vertical"
-                android:drawablePadding="16dp"
-                android:background="?android:attr/selectableItemBackground"/>
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

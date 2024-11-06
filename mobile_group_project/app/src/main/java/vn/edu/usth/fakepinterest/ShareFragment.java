@@ -25,6 +25,7 @@ public class ShareFragment extends BottomSheetDialogFragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.share_layout, container, false);
+
         Button cancelButton = view.findViewById(R.id.close_share);
         cancelButton.setOnClickListener(v -> {
             getActivity().getSupportFragmentManager().popBackStack();
@@ -42,10 +43,9 @@ public class ShareFragment extends BottomSheetDialogFragment {
                 fragmentTransaction.remove(ShareFragment.this);
                 fragmentTransaction.commit();
 
-                // Optional: Add a pop back stack call if you are using back stack
-                fragmentManager.popBackStack();
             }
         });
+
         return view;
     }
 }

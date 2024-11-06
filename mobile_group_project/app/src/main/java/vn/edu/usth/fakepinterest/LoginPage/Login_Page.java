@@ -2,7 +2,6 @@ package vn.edu.usth.fakepinterest.LoginPage;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -20,7 +19,7 @@ public class    Login_Page extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Log.i("onCreate LoginPage", "onCreate State");        setContentView(R.layout.activity_login_page);
+        setContentView(R.layout.activity_login_page);
 
 
         // Continue button
@@ -55,35 +54,5 @@ public class    Login_Page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-    }
-
-    public void onStart() {
-        super.onStart();
-        Log.i("onStart LoginPage", "onStart State");
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Log.i("onResume LoginPage", "onResume State");
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        Log.i("onPause LoginPage", "onPause State");
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        Log.i("onStop LoginPage", "onStop State");
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Log.i("onDestroy LoginPage", "onDestroy State");
     }
 }

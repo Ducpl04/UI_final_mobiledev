@@ -7,85 +7,57 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.imageview.ShapeableImageView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import vn.edu.usth.fakepinterest.ImageData;
 import vn.edu.usth.fakepinterest.R;
 
 public class HomePage_All extends Fragment {
+
+    HomeRecycleAdapter homeRecycleAdapter;
+    RecyclerView recyclerView;
 
     private static final String TAG = "HomePage_All";
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_homepage_all, container, false);
-    }
+        View view = inflater.inflate(R.layout.fragment_homepage_all, container, false);
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        recyclerView = view.findViewById(R.id.recyclerviewhome);
 
-        LinearLayout imageContainer1 = view.findViewById(R.id.left_linear_image);
-        LinearLayout imageContainer2 = view.findViewById(R.id.right_linear_image);
+        List<ImageData> dataList = new ArrayList<>();
 
-        // Log the number of children in both containers
-        Log.d(TAG, "Number of children in image container 1: " + imageContainer1.getChildCount());
-        Log.d(TAG, "Number of children in image container 2: " + imageContainer2.getChildCount());
+        dataList.add(new ImageData(R.drawable.animal_1,"Data"));
+        dataList.add(new ImageData(R.drawable.anime_3, "Data2"));
+        dataList.add(new ImageData(R.drawable.animal_3, "Data3"));
+        dataList.add(new ImageData(R.drawable.animal_4, "Data4"));
+        dataList.add(new ImageData(R.drawable.animal_5, "Data5"));
+        dataList.add(new ImageData(R.drawable.animal_6, "Data6"));
+        dataList.add(new ImageData(R.drawable.animal_7, "Data7"));
 
-        // Create a common OnClickListener for all ShapeableImageView elements
-        View.OnClickListener onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.d(TAG, "ShapeableImageView clicked: " + v.getId());
-                navigateToDestinationFragment();
-            }
-        };
+        RecyclerView.LayoutManager layoutManager =  new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
 
-        // Handle ShapeableImageView elements in both LinearLayouts
-        handleShapeableImageViews(imageContainer1, onClickListener);
-        handleShapeableImageViews(imageContainer2, onClickListener);
-    }
+        homeRecycleAdapter = new HomeRecycleAdapter(requireContext(), dataList);
+        recyclerView.setAdapter(homeRecycleAdapter);
 
-    private void handleShapeableImageViews(LinearLayout container, View.OnClickListener onClickListener) {
-        // Iterate through all child views in the container
-        for (int i = 0; i < container.getChildCount(); i++) {
-            View child = container.getChildAt(i);
+        return view;
 
-            // Check if the child view is an instance of LinearLayout
-            if (child instanceof LinearLayout) {
-                LinearLayout verticalLayout = (LinearLayout) child;
-
-                // Iterate through children of the LinearLayout
-                for (int j = 0; j < verticalLayout.getChildCount(); j++) {
-                    View innerChild = verticalLayout.getChildAt(j);
-
-                    // Check if the inner child is a ShapeableImageView
-                    if (innerChild instanceof ShapeableImageView) {
-                        ShapeableImageView imageView = (ShapeableImageView) innerChild;
-                        imageView.setOnClickListener(onClickListener);
-                    }
-                }
-            }
-        }
-    }
-
-    private void navigateToDestinationFragment() {
-        Fragment destinationFragment = new clicked_on_image(); // Replace with your destination fragment
-        FragmentManager fragmentManager = getParentFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-        // Replace the current fragment with the destination fragment
-        fragmentTransaction.replace(R.id.main, destinationFragment); // Ensure this ID matches your container
-        fragmentTransaction.addToBackStack(null); // Add to back stack to allow navigation back
-
-        // Commit the transaction
-        fragmentTransaction.commit();
     }
 }

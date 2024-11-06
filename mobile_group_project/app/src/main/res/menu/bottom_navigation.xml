@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/bottom_home"
+    <item android:id="@+id/bottom_home"
         android:title="Home"
         android:icon="@drawable/home_icon" />
 
-    <item
-        android:id="@+id/bottom_search"
+    <item android:id="@+id/bottom_search"
         android:title="Search"
         android:icon="@drawable/search_icon" />
 
-    <item
-        android:id="@+id/bottom_create"
+    <item android:id="@+id/bottom_create"
         android:title="Create"
         android:icon="@drawable/create_icon" />
 
-    <item
-        android:id="@+id/bottom_notification"
+    <item android:id="@+id/bottom_notification"
         android:title="Notification"
         android:icon="@drawable/notification_icon" />
 
-    <item
-        android:id="@+id/bottom_saved"
+    <item android:id="@+id/bottom_saved"
         android:title="Saved"
         android:icon="@drawable/saved_icon" />
 </menu>

@@ -8,39 +8,48 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
-import vn.edu.usth.fakepinterest.CreatePage.CreatePage;
 import vn.edu.usth.fakepinterest.MainActivity;
+import vn.edu.usth.fakepinterest.Notification.NotificationActivity;
 import vn.edu.usth.fakepinterest.R;
 import vn.edu.usth.fakepinterest.Saved.SavedActivity;
+import vn.edu.usth.fakepinterest.Saved.YourAccount;
 
 public class SearchActivity extends AppCompatActivity {
-    TabLayout tabLayout;
     BottomNavigationView bottomNavigationView;
-    //move to anther Fragment
-    public void openFragment(View view) {
-        // Create an instance of your Fragment
-        SearchEnd fragment = new SearchEnd();
+    Button button;
 
-        // Begin a Fragment transaction
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.search_button_1, fragment) // Use the ID of your container layout
-                .addToBackStack(null) // Adds the transaction to the back stack
-                .commit();
-    }
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("onCreate MainActivity", "onCreate State");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        button = findViewById(R.id.search_button_1);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SearchEnd();
+                // Perform the fragment transaction
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.activity_search, fragment);
+                transaction.addToBackStack(null); // Adds the transaction to the back stack so the user can navigate back
+                transaction.commit();
+            }
+        });
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.bottom_search);
@@ -54,14 +63,18 @@ public class SearchActivity extends AppCompatActivity {
                         startActivity(intent);
                         return true;
 
+                    case R.id.bottom_search:
+                        Intent intent0 = new Intent(SearchActivity.this, SearchActivity.class);
+                        startActivity(intent0);
+                        return true;
+
                     case R.id.bottom_create:
-                        CreatePage bottomSheet = new CreatePage();
-                        bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
+                        showBottomSheetDialog();
                         return true;
 
                     case R.id.bottom_notification:
-                        Intent intent1 = new Intent(SearchActivity.this, MainActivity.class);
-                        startActivity(intent1);
+                        Intent intent3 = new Intent(SearchActivity.this, NotificationActivity.class);
+                        startActivity(intent3);
                         return true;
 
                     case R.id.bottom_saved:
@@ -72,5 +85,11 @@ public class SearchActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    private void showBottomSheetDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View sheetView = getLayoutInflater().inflate(R.layout.bottomsheetlayout, null);
+        bottomSheetDialog.setContentView(sheetView);
+        bottomSheetDialog.show();
     }
 }

@@ -13,13 +13,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
-import vn.edu.usth.fakepinterest.CreatePage.CreatePage;
 import vn.edu.usth.fakepinterest.Homepage.HomePageAdapter;
-import vn.edu.usth.fakepinterest.Homepage.HomePage_All;
-import vn.edu.usth.fakepinterest.Notification.NotificationPage;
+import vn.edu.usth.fakepinterest.Notification.NotificationActivity;
 import vn.edu.usth.fakepinterest.Saved.SavedActivity;
 import vn.edu.usth.fakepinterest.SearchPage.SearchActivity;
 
@@ -89,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
                         tabLayout.setVisibility(View.VISIBLE);
                         viewPager2.setVisibility(View.VISIBLE); // Show the ViewPager again
                         frameLayout.setVisibility(View.GONE); // Hide frameLayout
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frameLayout, new HomePage_All()).commit();
+                        Intent intent0 = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(intent0);
                         return true;
 
                     case R.id.bottom_search:
@@ -100,14 +99,13 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.bottom_create:
-                        CreatePage bottomSheet = new CreatePage();
-                        bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
+                        showBottomSheetDialog();
                         return true;
 
                     case R.id.bottom_notification:
-                        tabLayout.setVisibility(View.GONE);
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frameLayout, new NotificationPage()).commit();
+                        tabLayout.setVisibility(View.VISIBLE);
+                        Intent intent3 = new Intent(MainActivity.this, NotificationActivity.class);
+                        startActivity(intent3);
                         return true;
 
                     case R.id.bottom_saved:
@@ -117,7 +115,23 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                 }
                 return false;
+
+
             }
+        });
+    }
+
+    private void showBottomSheetDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View sheetView = getLayoutInflater().inflate(R.layout.bottomsheetlayout, null);
+        bottomSheetDialog.setContentView(sheetView);
+        bottomSheetDialog.show();
+        viewPager2.setVisibility(View.VISIBLE);
+
+        // Add a dismiss listener to restore the visibility of the main content
+        bottomSheetDialog.setOnDismissListener(dialog -> {
+            tabLayout.setVisibility(View.VISIBLE);
+            viewPager2.setVisibility(View.VISIBLE);
         });
     }
 

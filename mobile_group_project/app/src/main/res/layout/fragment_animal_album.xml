@@ -11,8 +11,6 @@
         android:id="@+id/button_back_click"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="10dp"
         android:alpha="0.75"
         android:background="@drawable/white_arrow" />
 
@@ -32,99 +30,97 @@
         android:layout_height="wrap_content"
         android:text="23 Pins"
         android:textColor="@color/white"
-        android:layout_marginBottom="10dp"
         android:padding="10dp"
         android:textSize="15sp">
 
     </TextView>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="match_parent">
-
-        <!-- Parent LinearLayout to divide screen horizontally -->
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
-            <!-- First half - LinearLayout with vertical orientation -->
+            <!-- Parent LinearLayout to divide screen horizontally -->
             <LinearLayout
-                android:id="@+id/saved_left_linear_image"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:orientation="vertical"
-                android:padding="10dp">
+                android:orientation="horizontal">
 
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                <!-- First half - LinearLayout with vertical orientation -->
+                <LinearLayout
+                    android:id="@+id/saved_left_linear_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/animal_4"
+                            app:shapeAppearanceOverlay="@style/round_image" />
+
+                    </FrameLayout>
+
                     <com.google.android.material.imageview.ShapeableImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
                         android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/animal_2"
+                        app:shapeAppearanceOverlay="@style/round_image" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/animal_4"
+                        app:shapeAppearanceOverlay="@style/round_image" />
+                </LinearLayout>
+
+                <!-- Second half - LinearLayout with vertical orientation -->
+                <LinearLayout
+                    android:id="@+id/saved_middle_linear_image"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:layout_marginBottom="10dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/animal_2"
+                            app:shapeAppearanceOverlay="@style/round_image" />
+
+                    </FrameLayout>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:layout_marginBottom="10dp"
                         android:scaleType="fitCenter"
                         android:src="@drawable/animal_4"
                         app:shapeAppearanceOverlay="@style/round_image" />
 
-                </FrameLayout>
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/animal_2"
-                    app:shapeAppearanceOverlay="@style/round_image" />
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:layout_marginBottom="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/animal_4"
-                    app:shapeAppearanceOverlay="@style/round_image" />
+                </LinearLayout>
             </LinearLayout>
-
-            <!-- Second half - LinearLayout with vertical orientation -->
-            <LinearLayout
-                android:id="@+id/saved_middle_linear_image"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/black"
-                android:orientation="vertical"
-                android:padding="10dp">
-
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:layout_marginBottom="10dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/animal_2"
-                        app:shapeAppearanceOverlay="@style/round_image" />
-
-                </FrameLayout>
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:adjustViewBounds="true"
-                    android:layout_marginBottom="10dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/animal_4"
-                    app:shapeAppearanceOverlay="@style/round_image" />
-
-            </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        </ScrollView>
+    </LinearLayout>

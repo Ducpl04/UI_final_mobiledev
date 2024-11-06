@@ -31,7 +31,7 @@
             android:background="@drawable/search_background"
             android:gravity="fill"
             android:textColorHint="@color/light_gray"
-            android:hint="The second chosen one"
+            android:hint="@string/the_second_chosen_one"
             android:textSize="20sp"
             tools:ignore="HardcodedText" />
 
@@ -70,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="Meow">
+                    android:text="@string/meow">
 
                 </TextView>
 
@@ -105,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="Meow">
+                    android:text="@string/meow">
 
                 </TextView>
 
@@ -140,7 +140,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textColor="@color/white"
-                    android:text="Meow">
+                    android:text="@string/meow">
 
                 </TextView>
             </FrameLayout>

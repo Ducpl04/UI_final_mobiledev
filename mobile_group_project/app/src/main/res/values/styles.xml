@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="round_image">
-        <item name="cornerSize">20dp</item>
+        <item name="cornerSize">15dp</item>
+    </style>
+
+    <style name="circle_image">
+        <item name="cornerSize">24dp</item>
     </style>
 </resources>

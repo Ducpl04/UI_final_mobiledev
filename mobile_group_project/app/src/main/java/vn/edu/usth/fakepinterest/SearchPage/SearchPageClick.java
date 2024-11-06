@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import vn.edu.usth.fakepinterest.R;
@@ -17,6 +18,7 @@ public class SearchPageClick extends Fragment {
     ImageButton button_back;
     Button animal4;
     Button share1;
+    ImageButton share2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,9 +29,15 @@ public class SearchPageClick extends Fragment {
         button_back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Fragment clicked = new SearchEnd();
-                FragmentTransaction fm = getActivity().getSupportFragmentManager().beginTransaction();
-                fm.replace(R.id.main, clicked).commit();
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                // Remove the current fragment
+                fragmentTransaction.remove(SearchPageClick.this);
+                fragmentTransaction.commit();
+
+                // Optional: Add a pop back stack call if you are using back stack
+                fragmentManager.popBackStack();
             }
         });
 
@@ -41,6 +49,16 @@ public class SearchPageClick extends Fragment {
                 shareFragment.show(getActivity().getSupportFragmentManager(), shareFragment.getTag());
             }
         });
+
+        share2 = v.findViewById(R.id.share_this_image);
+        share2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ShareFragment shareFragment = new ShareFragment();
+                shareFragment.show(getActivity().getSupportFragmentManager(), shareFragment.getTag());
+            }
+        });
+
 
         animal4 = v.findViewById(R.id.go_to_animail4_end);
         animal4.setOnClickListener(new View.OnClickListener() {

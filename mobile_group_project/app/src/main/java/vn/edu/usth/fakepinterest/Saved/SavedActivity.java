@@ -7,18 +7,21 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
-import vn.edu.usth.fakepinterest.CreatePage.CreatePage;
 import vn.edu.usth.fakepinterest.MainActivity;
-import vn.edu.usth.fakepinterest.Notification.NotificationPage;
+import vn.edu.usth.fakepinterest.Notification.NotificationActivity;
 import vn.edu.usth.fakepinterest.R;
 import vn.edu.usth.fakepinterest.SearchPage.SearchActivity;
 
@@ -29,12 +32,26 @@ public class SavedActivity extends AppCompatActivity {
     SavedPageAdapter savedPageAdapter;
     BottomNavigationView bottomNavigationView;
     FrameLayout frameLayout;
+    ImageButton imageButton;
 
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("onCreate MainActivity", "onCreate State");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
+
+        imageButton = findViewById(R.id.go_to_account);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new YourAccount();
+                // Perform the fragment transaction
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                transaction.replace(R.id.saved_page, fragment);
+                transaction.addToBackStack(null); // Adds the transaction to the back stack so the user can navigate back
+                transaction.commit();
+            }
+        });
 
         tabLayout = findViewById(R.id.tabLayout);
         viewPager2 = findViewById(R.id.viewPager2);
@@ -97,14 +114,13 @@ public class SavedActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.bottom_create:
-                        CreatePage bottomSheet = new CreatePage();
-                        bottomSheet.show(getSupportFragmentManager(), bottomSheet.getTag());
+                        showBottomSheetDialog();
                         return true;
 
                     case R.id.bottom_notification:
-                        tabLayout.setVisibility(View.GONE);
-                        getSupportFragmentManager().beginTransaction()
-                                .replace(R.id.frameLayout, new NotificationPage()).commit();
+                        tabLayout.setVisibility(View.VISIBLE);
+                        Intent intent3 = new Intent(SavedActivity.this, NotificationActivity.class);
+                        startActivity(intent3);
                         return true;
 
                     case R.id.bottom_saved:
@@ -117,6 +133,19 @@ public class SavedActivity extends AppCompatActivity {
                 }
                 return false;
             }
+        });
+    }
+    private void showBottomSheetDialog() {
+        BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
+        View sheetView = getLayoutInflater().inflate(R.layout.bottomsheetlayout, null);
+        bottomSheetDialog.setContentView(sheetView);
+        bottomSheetDialog.show();
+        viewPager2.setVisibility(View.VISIBLE);
+
+        // Add a dismiss listener to restore the visibility of the main content
+        bottomSheetDialog.setOnDismissListener(dialog -> {
+            tabLayout.setVisibility(View.VISIBLE);
+            viewPager2.setVisibility(View.VISIBLE);
         });
     }
 }
