@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,13 +18,12 @@ import androidx.fragment.app.FragmentTransaction;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
-import com.google.android.material.tabs.TabLayout;
 
 import vn.edu.usth.fakepinterest.MainActivity;
 import vn.edu.usth.fakepinterest.Notification.NotificationActivity;
 import vn.edu.usth.fakepinterest.R;
 import vn.edu.usth.fakepinterest.Saved.SavedActivity;
-import vn.edu.usth.fakepinterest.Saved.YourAccount;
+
 
 public class SearchActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;

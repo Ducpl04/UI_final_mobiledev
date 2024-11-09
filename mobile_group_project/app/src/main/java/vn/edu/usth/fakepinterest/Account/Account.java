@@ -1,42 +1,52 @@
-package vn.edu.usth.fakepinterest.Homepage;
+package vn.edu.usth.fakepinterest.Account;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-
-import com.google.android.material.imageview.ShapeableImageView;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.edu.usth.fakepinterest.Homepage.HomeRecycleAdapter;
 import vn.edu.usth.fakepinterest.ImageData;
 import vn.edu.usth.fakepinterest.R;
 
-public class HomePage_All extends Fragment {
-
-    HomeRecycleAdapter homeRecycleAdapter;
+public class Account extends Fragment {
     RecyclerView recyclerView;
-
-    private static final String TAG = "HomePage_All";
-
+    HomeRecycleAdapter homeRecycleAdapter;
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_homepage_all, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_account, container, false);
+
+        ImageButton back = view.findViewById(R.id.back_button);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Handle the back button click to remove the fragment
+                FragmentManager fragmentManager = getParentFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                // Remove the current fragment
+                fragmentTransaction.remove(Account.this);
+                fragmentTransaction.commit();
+
+                // Optional: Add a pop back stack call if you are using back stack
+                fragmentManager.popBackStack();
+            }
+        });
 
         recyclerView = view.findViewById(R.id.recyclerviewhome);
         List<ImageData> dataList = new ArrayList<>();
@@ -57,6 +67,5 @@ public class HomePage_All extends Fragment {
         recyclerView.setAdapter(homeRecycleAdapter);
 
         return view;
-
     }
 }

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import vn.edu.usth.fakepinterest.R;
-import vn.edu.usth.fakepinterest.Saved.YourAccount;
+
 
 public class Clicked_update extends Fragment {
     private ImageButton button_back_notification;

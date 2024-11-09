@@ -24,9 +24,7 @@ public class    Login_Page extends AppCompatActivity {
 
         // Continue button
         continue_button = findViewById(R.id.continue_button);
-
         continue_button.findViewById(R.id.continue_button);
-
         continue_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

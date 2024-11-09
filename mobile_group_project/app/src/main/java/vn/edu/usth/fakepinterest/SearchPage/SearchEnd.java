@@ -12,10 +12,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import vn.edu.usth.fakepinterest.Account;
 import vn.edu.usth.fakepinterest.R;
 import vn.edu.usth.fakepinterest.Saved.TheSecondChosenOne;
-import vn.edu.usth.fakepinterest.Saved.YourAccount;
+
 
 public class SearchEnd extends Fragment {
     Button meow1;

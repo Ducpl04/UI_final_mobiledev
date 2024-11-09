@@ -1,117 +1,136 @@
-<LinearLayout
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/black"
-    android:orientation="vertical"
-    android:padding="16dp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:padding="16dp">
+
+        <!-- Back Button -->
         <ImageButton
-            android:id="@+id/button_main_1"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:alpha="0.75"
+            android:id="@+id/back_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
             android:background="@drawable/white_arrow" />
 
-    </LinearLayout>
-    <!-- Profile Picture -->
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center_horizontal"
-        android:scaleType="centerCrop"
-        android:src="@drawable/cheems_ava"/>
 
-    <!-- Username -->
-    <TextView
-        android:id="@+id/username"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Cheems"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white" />
+        <!-- Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_picture"
+            app:shapeAppearanceOverlay="@style/round_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:src="@drawable/cheems_ava"/>
 
-    <!-- Bio -->
-    <TextView
-        android:id="@+id/bio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:layout_gravity="center_horizontal"
-        android:text="This is a Cheems Moi"
-        android:textSize="20sp"
-        android:textColor="@android:color/white" />
-
-    <!-- Stats Section -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <!-- Number of Pins -->
-        <LinearLayout
+        <!-- Name -->
+        <TextView
+            android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:text="Cheems Moi"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_below="@id/profile_picture"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp" />
 
-            <TextView
-                android:id="@+id/pins_count"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="120"
-                android:textColor="@android:color/white"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pins"
-                android:textSize="20sp"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
-
-        <!-- Separator -->
-        <View
-            android:layout_width="1dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/darker_gray" />
-
-        <!-- Number of Followers -->
-        <LinearLayout
+        <!-- Username -->
+        <TextView
+            android:id="@+id/profile_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:text="@CheemsVanMoi"
+            android:textColor="#B0B0B0"
+            android:textSize="16dp"
+            android:layout_below="@id/profile_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp" />
+
+        <!-- Followers and Following -->
+        <TextView
+            android:id="@+id/follow_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 followers · 0 following"
+            android:textColor="#B0B0B0"
+            android:textSize="16sp"
+            android:layout_below="@id/profile_username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp" />
+
+        <!-- Edit Profile Button -->
+        <Button
+            android:id="@+id/edit_profile_button"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:text="Edit profile"
+            android:textSize="18dp"
+            android:backgroundTint="#3C3C3C"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/follow_info"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp" />
+
+        <!-- Tab Navigation -->
+        <LinearLayout
+            android:id="@+id/tab_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_profile_button"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
 
             <TextView
-                android:id="@+id/followers_count"
-                android:layout_width="wrap_content"
+                android:id="@+id/tab_created"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="500"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@android:color/white" />
+                android:layout_weight="1"
+                android:text="Saved"
+                android:textColor="#FFFFFF"
+
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="?attr/selectableItemBackground" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tab_saved"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Followers"
-                android:textSize="20sp"
-                android:textColor="@android:color/white" />
+                android:layout_weight="1"
+                android:text="Create"
+                android:textColor="#B0B0B0"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textSize="16sp"
+                android:background="?attr/selectableItemBackground" />
         </LinearLayout>
-    </LinearLayout>
-</LinearLayout>
+
+        <!-- Pin Grid (RecyclerView) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewhome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_below="@id/tab_navigation"
+            android:layout_marginTop="8dp"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            android:numColumns="2"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="8dp"
+            android:scrollbars="vertical" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

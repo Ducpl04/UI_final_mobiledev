@@ -2,7 +2,7 @@ package vn.edu.usth.fakepinterest;
 
 import android.widget.Button;
 
-public class ImageData {
+public class ImageDataBoard {
     Integer dataResource;
     String dataName;
     Button button_share;
@@ -12,17 +12,18 @@ public class ImageData {
         return button_share;
     }
 
-    public ImageData(Integer dataresource, String dataName){
+    public ImageDataBoard(Integer dataresource, String dataName, String pins_quantities){
         this.dataResource = dataresource;
         this.dataName = dataName;
+        this.pins_quantities = pins_quantities;
     }
 
     public int getImageResources() {
         return dataResource;
     }
 
-    public void setDataResource(Integer dataResource){
-        this.dataResource = dataResource;
+    public String getPins_quantities() {
+        return pins_quantities;
     }
 
     public String getImageName() {

@@ -1,5 +1,6 @@
-package vn.edu.usth.fakepinterest.Saved;
+package vn.edu.usth.fakepinterest.Account;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,21 +13,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import vn.edu.usth.fakepinterest.Account;
-import vn.edu.usth.fakepinterest.Homepage.clicked_on_image_door;
 import vn.edu.usth.fakepinterest.R;
+import vn.edu.usth.fakepinterest.SearchPage.SearchPageClick;
 
 public class YourAccount extends Fragment {
 
     private ImageButton button_back;
-
+    private Button acc;
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_your_account, container, false);
 
-        button_back = view.findViewById(R.id.button_main_1);
+        button_back = view.findViewById(R.id.button_back);
         button_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,17 +42,19 @@ public class YourAccount extends Fragment {
             }
         });
 
-        Button acc = view.findViewById(R.id.cheems_msg2);
-        acc.setOnClickListener(new View.OnClickListener() {
+        Button openFragmentButton = view.findViewById(R.id.view_profile);
+        openFragmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Fragment clicked = new Account();
                 FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-                transaction.replace(R.id.your_account, clicked);
+                transaction.replace(R.id.saved_page, clicked);
                 transaction.addToBackStack(null); // Adds to back stack to allow navigation back
                 transaction.commit();
             }
         });
+
         return view;
     }
 }

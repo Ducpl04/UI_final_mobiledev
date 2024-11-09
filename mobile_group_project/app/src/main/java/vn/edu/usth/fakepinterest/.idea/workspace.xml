@@ -2,8 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d67173f3-f38f-46b6-b628-68f89c8dcd76" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../../../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../../../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saved/SavedPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SavedPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../../../../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Account/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Account/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Account/UserDataAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ImageDataBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Saved/SavedRecycleAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../res/layout/account_proflie.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../res/layout/item_image_boards.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../res/layout/tesing.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Homepage/HomePage_All.java" beforeDir="false" afterPath="$PROJECT_DIR$/Homepage/HomePage_All.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoginPage/Login_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/LoginPage/Login_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Notification/Clicked_update.java" beforeDir="false" afterPath="$PROJECT_DIR$/Notification/Clicked_update.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/BoardsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/BoardsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/PinsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/PinsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/SavedActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Saved/SavedActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saved/YourAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Account/YourAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchPage/SearchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/SearchPage/SearchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SearchPage/SearchEnd.java" beforeDir="false" afterPath="$PROJECT_DIR$/SearchPage/SearchEnd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../res/layout/activity_saved.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../res/layout/activity_saved.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../res/layout/fragment_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../res/layout/fragment_account.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../res/layout/fragment_boards.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../res/layout/fragment_boards.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../res/layout/fragment_pins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../res/layout/fragment_pins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../res/layout/fragment_your_account.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../res/layout/fragment_your_account.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,23 +36,23 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2oQJKpk1SqMdTkRiUuJZMVXg237" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/phaml/OneDrive/Documents/B3-MobileApp/mobile_group_project/mobile_group_project/app/src/main/java/vn/edu/usth/fakepinterest"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/phaml/OneDrive/Documents/B3-MobileApp/mobile_group_project/mobile_group_project/app/src/main/java/vn/edu/usth/fakepinterest&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -20,6 +20,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.tabs.TabLayout;
 
+import vn.edu.usth.fakepinterest.Account.YourAccount;
 import vn.edu.usth.fakepinterest.MainActivity;
 import vn.edu.usth.fakepinterest.Notification.NotificationActivity;
 import vn.edu.usth.fakepinterest.R;
@@ -45,11 +46,10 @@ public class SavedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new YourAccount();
-                // Perform the fragment transaction
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.saved_page, fragment);
-                transaction.addToBackStack(null); // Adds the transaction to the back stack so the user can navigate back
-                transaction.commit();
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.saved_page, fragment)
+                        .addToBackStack(null)
+                        .commit();
             }
         });
 
